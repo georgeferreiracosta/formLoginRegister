@@ -1,35 +1,40 @@
+/* Importa a fonte 'Poppins' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Reset básico de estilo para margem, padding e box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Define a fonte padrão */
 }
 
+/* Estilização do corpo da página */
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(90deg, #0e0d0d, #345ee6);
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  min-height: 100vh; /* Define altura mínima para preencher a tela */
+  background: linear-gradient(90deg, #0e0d0d, #345ee6); /* Fundo gradiente */
 }
 
+/* Estilos para o container principal */
 .container {
   position: relative;
   width: 850px;
   height: 550px;
   background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 30px; /* Arredonda as bordas */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Sombra leve ao redor */
   margin: 20px;
-  overflow: hidden;
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas */
 }
 
+/* Estilo para a caixa de formulário (login e registro) */
 .form-box {
   position: absolute;
   right: 0;
-  width: 50%;
+  width: 50%; /* Ocupa metade da largura do container */
   height: 100%;
   background-color: #fff;
   display: flex;
@@ -38,39 +43,46 @@ body {
   text-align: center;
   padding: 40px;
   z-index: 1;
-  transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+  transition: .6s ease-in-out 1.2s, visibility 0s 1s; /* Animações para transição */
 }
 
+/* Define a posição da caixa de registro quando o container tem a classe 'active' */
 .container.active .form-box {
   right: 50%;
 }
 
+/* A caixa de registro fica oculta inicialmente */
 .form-box.register {
   visibility: hidden;
 }
 
+/* Mostra a caixa de registro quando o container tem a classe 'active' */
 .container.active .form-box.register {
   visibility: visible;
 }
 
+/* Estilos básicos para o formulário */
 form {
   width: 100%;
 }
 
+/* Estilo dos títulos */
 .container h1 {
   font-size: 36px;
   margin: -10px 0;
 }
 
+/* Caixa de entrada dos campos do formulário */
 .input-box {
   position: relative;
   margin: 30px 0;
 }
 
+/* Estilos para o campo de entrada */
 .input-box input {
   width: 100%;
   padding: 13px 50px 13px 20px;
-  background-color: #eee;
+  background-color: #eee; /* Fundo da caixa de entrada */
   border-radius: 8px;
   border: none;
   outline: none;
@@ -79,54 +91,61 @@ form {
   font-weight: 500;
 }
 
+/* Cor e estilo do placeholder dos campos */
 .input-box input::placeholder {
   color: #888;
   font-weight: 400;
 }
 
+/* Estilos para o ícone dentro da caixa de entrada */
 .input-box i {
   position: absolute;
   right: 20px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* Centraliza verticalmente o ícone */
   font-size: 20px;
   color: #888;
 }
 
+/* Link para esquecimento de senha */
 .forgot-link {
   margin: -15px 0 15px;
 }
 
+/* Estilos do link de esquecimento de senha */
 .forgot-link a {
-  font-size: 14, 5px;
+  font-size: 14.5px;
   color: #333;
   text-decoration: none;
 }
 
+/* Estilo para os botões principais */
 .btn {
   width: 100%;
   height: 48px;
-  background: #11e62d;
+  background: #11e62d; /* Cor verde */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
   border: none;
   cursor: pointer;
   font-size: 16px;
   color: #fff;
   font-weight: 600;
-
 }
 
+/* Estilo do parágrafo abaixo do botão */
 .container p {
-  font-size: 14, 5px;
+  font-size: 14.5px;
   margin: 15px 0;
 }
 
+/* Estilo para os ícones sociais */
 .social-icons {
   display: flex;
   justify-content: center;
 }
 
+/* Estilos para cada ícone social */
 .social-icons a {
   display: inline-flex;
   padding: 10px;
@@ -138,29 +157,32 @@ form {
   margin: 0 8px;
 }
 
+/* Estilos para a caixa de alternância */
 .toggle-box {
   position: absolute;
   width: 100%;
   height: 100%;
-
 }
 
+/* Fundo animado para a caixa de alternância */
 .toggle-box::before {
   content: '';
   position: absolute;
   left: -250%;
   width: 300%;
   height: 100%;
-  background: #15d860;
+  background: #15d860; /* Cor verde */
   border-radius: 150px;
   z-index: 2;
   transition: 1.8s ease-in-out;
 }
 
+/* Posição do fundo animado quando ativo */
 .container.active .toggle-box::before {
   left: 50%;
 }
 
+/* Painéis de alternância de login/registro */
 .toggle-panel {
   position: absolute;
   width: 50%;
@@ -174,34 +196,36 @@ form {
   transition: .6s ease-in-out;
 }
 
+/* Painel de registro */
 .toggle-panel.toggle-left {
   left: 0;
   transition-delay: 1.2s;
 }
 
+/* Oculta o painel de registro quando ativo */
 .container.active .toggle-panel.toggle-left {
   left: -50%;
   transition-delay: .6s;
 }
 
-
+/* Painel de login */
 .toggle-panel.toggle-right {
   right: -50%;
   transition-delay: .6s;
-
 }
 
+/* Exibe o painel de login quando ativo */
 .container.active .toggle-panel.toggle-right {
   right: 0;
   transition-delay: 1.2s;
-
 }
 
-
+/* Margem para o texto no painel de alternância */
 .toggle-panel p {
   margin-bottom: 20px;
 }
 
+/* Botão nos painéis de alternância */
 .toggle-panel .btn {
   width: 160px;
   height: 46px;
@@ -210,6 +234,7 @@ form {
   box-shadow: none;
 }
 
+/* Estilos para telas menores (até 650px de largura) */
 @media screen and (max-width: 650px) {
   .container {
     height: calc(100vh - 40px);
@@ -220,7 +245,6 @@ form {
     width: 100%;
     height: 70%;
   }
-
 
   .container.active .form-box {
     right: 0;
@@ -262,9 +286,9 @@ form {
   .container.active .toggle-panel.toggle-right {
     bottom: 0;
   }
-
 }
 
+/* Ajuste para telas muito pequenas (até 400px de largura) */
 @media screen and (max-width: 400px) {
   .form-box {
     padding: 20px;
@@ -273,5 +297,4 @@ form {
   .toggle-panel h1 {
     font-size: 30px;
   }
-
 }

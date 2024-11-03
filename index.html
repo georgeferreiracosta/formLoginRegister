@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
+    <!-- Define o conjunto de caracteres da página como UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Define a compatibilidade com o Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,
-initial-scale=1.0">
+    <!-- Define a largura e a escala inicial da página para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario para Registro</title>
+    <!-- Link para ícones da biblioteca Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link para o arquivo CSS do formulário -->
     <link rel="stylesheet" href="formulario/style.css">
-
 </head>
 
 <body>
+    <!-- Container principal que envolve o formulário de login e registro -->
     <div class="container">
+        <!-- Caixa do formulário de login -->
         <div class="form-box login">
             <form action="">
                 <h1>Login</h1>
 
-
+                <!-- Caixa de entrada para o nome de usuário -->
                 <div class="input-box">
                     <input type="text" placeholder="Username" required>
-                    <i class="bx bxs-user"></i>
+                    <i class="bx bxs-user"></i> <!-- Ícone de usuário -->
                 </div>
 
+                <!-- Caixa de entrada para a senha -->
                 <div class="input-box">
                     <input type="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt'></i>
+                    <i class='bx bxs-lock-alt'></i> <!-- Ícone de cadeado para senha -->
                 </div>
+
+                <!-- Link para recuperação de senha -->
                 <div class="forgot-link">
                     <a href="#">Forgot password?</a>
                 </div>
+
+                <!-- Botão para enviar o formulário de login -->
                 <button type="submit" class="btn">Login</button>
 
-
-
+                <!-- Texto e ícones para login em plataformas sociais -->
                 <p>Or login with social platforms</p>
                 <div class="social-icons">
                     <a href="#"><i class="bx bxl-google"></i></a>
@@ -45,29 +53,33 @@ initial-scale=1.0">
             </form>
         </div>
 
-
+        <!-- Caixa do formulário de registro -->
         <div class="form-box register">
             <form action="">
-                <h1>Registration</h1>
+                <h1>Registro</h1>
 
-
+                <!-- Entrada para o nome de usuário -->
                 <div class="input-box">
                     <input type="text" placeholder="Usename" required>
-                    <i class="bx bxs-user"></i>
+                    <i class="bx bxs-user"></i> <!-- Ícone de usuário -->
                 </div>
 
+                <!-- Entrada para o e-mail -->
                 <div class="input-box">
                     <input type="email" placeholder="email" required>
-                    <i class="bx bxs-envelope"></i>
+                    <i class="bx bxs-envelope"></i> <!-- Ícone de envelope -->
                 </div>
 
+                <!-- Entrada para a senha -->
                 <div class="input-box">
                     <input type="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt'></i>
+                    <i class='bx bxs-lock-alt'></i> <!-- Ícone de cadeado para senha -->
                 </div>
 
+                <!-- Botão para enviar o formulário de registro -->
                 <button type="submit" class="btn">Register</button>
 
+                <!-- Texto e ícones para registro em plataformas sociais -->
                 <p>Or register with social platforms</p>
                 <div class="social-icons">
                     <a href="#"><i class="bx bxl-google"></i></a>
@@ -78,24 +90,25 @@ initial-scale=1.0">
             </form>
         </div>
 
+        <!-- Caixa de alternância entre login e registro -->
         <div class="toggle-box">
             <div class="toggle-panel toggle-left">
                 <h1>Seja Bem Vindo!</h1>
                 <p>nao tem uma conta?</p>
+                <!-- Botão para exibir o formulário de registro -->
                 <button class="btn register-btn">Register</button>
             </div>
 
             <div class="toggle-panel toggle-right">
                 <h1>Bem Vindo! Volte</h1>
                 <p>Feito agora tem uma conta?</p>
+                <!-- Botão para exibir o formulário de login -->
                 <button class="btn login-btn">Login</button>
             </div>
         </div>
-
     </div>
 
+    <!-- Link para o arquivo JavaScript do formulário -->
     <script src="formulario/script.js"></script>
-
 </body>
-
 </html>
